@@ -7,7 +7,7 @@ turo_tx <- turo_df %>%
 
 #load to csv
 turo_tx <- read_csv('turoTX.csv')
-print("There have 22 continuouse var and 30 categorical var(8 char,2 num and 21 logi")
+print("There have 19 continuouse var and 34 categorical var(8 char,5 num and 21 logi")
 
 #summarise each var and draw hist to continuouse var, bar to categorical var
 #1.continuouse var:car.deliver.airport.num
@@ -31,18 +31,7 @@ car.deliver.hotel.num.summary
 hist(turo_tx$car.deliver.hotel.num,xlab="car.deliver.hotel.num",main="Histogram of car.deliver.hotel.num")
 
 
-#3.continuouse var:car.deliver.to.you.num
-car.deliver.to.you.num.summary <- turo_tx %>% 
-  summarise_at(vars(car.deliver.to.you.num),
-               list(min=min, Q1=~quantile(., probs = 0.25),
-                    medium=median, Q3=~quantile(., probs = 0.75),
-                    max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
-car.deliver.to.you.num.summary
-#car.deliver.to.you.num Histofram")
-hist(turo_tx$car.deliver.to.you.num,xlab="car.deliver.to.you.num",main="Histogram of car.deliver.to.you.num")
-
-
-#4.continuouse var:car.deliver.train.station.num
+#3.continuouse var:car.deliver.train.station.num
 car.deliver.train.station.num.summary <- turo_tx %>% 
   summarise_at(vars(car.deliver.train.station.num),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -53,7 +42,7 @@ car.deliver.train.station.num.summary
 hist(turo_tx$car.deliver.train.station.num,xlab="car.deliver.train.station.num",main="Histogram of car.deliver.train.station.num")
 
 
-#5.continuouse var:car.displayed.turo.review.num
+#4.continuouse var:car.displayed.turo.review.num
 car.displayed.turo.review.num.summary <- turo_tx %>% 
   summarise_at(vars(car.displayed.turo.review.num),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -63,7 +52,7 @@ car.displayed.turo.review.num.summary
 #car.displayed.turo.review.num Histofram")
 hist(turo_tx$car.displayed.turo.review.num,xlab="car.displayed.turo.review.num",main="Histogram of car.displayed.turo.review.num")
 
-#6.continuouse var:car.displayed.turo.review.num.past.12m
+#5.continuouse var:car.displayed.turo.review.num.past.12m
 car.displayed.turo.review.num.past.12m.summary <- turo_tx %>% 
   summarise_at(vars(car.displayed.turo.review.num.past.12m),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -73,7 +62,7 @@ car.displayed.turo.review.num.past.12m.summary
 #car.displayed.turo.review.num.past.12m Histofram")
 hist(turo_tx$car.displayed.turo.review.num.past.12m,xlab="car.displayed.turo.review.num.past.12m",main="Histogram of car.displayed.turo.review.num.past.12m")
 
-#7.continuouse var:car.displayed.turo.review.num.past.18m
+#6.continuouse var:car.displayed.turo.review.num.past.18m
 car.displayed.turo.review.num.past.18m.summary <- turo_tx %>% 
   summarise_at(vars(car.displayed.turo.review.num.past.18m),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -83,7 +72,7 @@ car.displayed.turo.review.num.past.18m.summary
 #car.displayed.turo.review.num.past.18m Histofram")
 hist(turo_tx$car.displayed.turo.review.num.past.18m,xlab="car.displayed.turo.review.num.past.18m",main="Histogram of car.displayed.turo.review.num.past.18m")
 
-#8.continuouse var:car.displayed.turo.review.num.past.6m
+#7.continuouse var:car.displayed.turo.review.num.past.6m
 car.displayed.turo.review.num.past.6m.summary <- turo_tx %>% 
   summarise_at(vars(car.displayed.turo.review.num.past.6m),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -93,7 +82,7 @@ car.displayed.turo.review.num.past.6m.summary
 #car.displayed.turo.review.num.past.6m Histofram")
 hist(turo_tx$car.displayed.turo.review.num.past.6m,xlab="car.displayed.turo.review.num.past.6m",main="Histogram of car.displayed.turo.review.num.past.6m")
 
-#9.continuouse var:car.displayed.user.review.num
+#8.continuouse var:car.displayed.user.review.num
 car.displayed.user.review.num.summary <- turo_tx %>% 
   summarise_at(vars(car.displayed.user.review.num),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -103,7 +92,7 @@ car.displayed.user.review.num.summary
 #car.displayed.user.review.num Histofram")
 hist(turo_tx$car.displayed.user.review.num,xlab="car.displayed.user.review.num",main="Histogram of car.displayed.user.review.num")
 
-#10.continuouse var:car.displayed.user.review.num.past.12m
+#9.continuouse var:car.displayed.user.review.num.past.12m
 car.displayed.user.review.num.past.12m.summary <- turo_tx %>% 
   summarise_at(vars(car.displayed.user.review.num.past.12m),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -113,7 +102,7 @@ car.displayed.user.review.num.past.12m.summary
 #car.displayed.user.review.num.past.12m Histofram")
 hist(turo_tx$car.displayed.user.review.num.past.12m,xlab="car.displayed.user.review.num.past.12m",main="Histogram of car.displayed.user.review.num.past.12m")
 
-#11.continuouse var:car.displayed.turo.review.num.past.18m
+#10.continuouse var:car.displayed.turo.review.num.past.18m
 car.displayed.turo.review.num.past.18m.summary <- turo_tx %>% 
   summarise_at(vars(car.displayed.turo.review.num.past.18m),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -123,7 +112,7 @@ car.displayed.turo.review.num.past.18m.summary
 #car.displayed.turo.review.num.past.18m Histofram")
 hist(turo_tx$car.displayed.turo.review.num.past.18m,xlab="car.displayed.turo.review.num.past.18m",main="Histogram of car.displayed.turo.review.num.past.18m")
 
-#12.continuouse var:car.displayed.user.review.num.past.6m
+#11.continuouse var:car.displayed.user.review.num.past.6m
 car.displayed.user.review.num.past.6m.summary <- turo_tx %>% 
   summarise_at(vars(car.displayed.user.review.num.past.6m),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -133,7 +122,7 @@ car.displayed.user.review.num.past.6m.summary
 #car.displayed.user.review.num.past.6m Histofram")
 hist(turo_tx$car.displayed.user.review.num.past.6m,xlab="car.displayed.user.review.num.past.6m",main="Histogram of car.displayed.user.review.num.past.6m")
 
-#13.continuouse var:car.extra.num
+#12.continuouse var:car.extra.num
 car.extra.num.summary <- turo_tx %>% 
   summarise_at(vars(car.extra.num),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -143,7 +132,7 @@ car.extra.num.summary
 #car.extra.num Histofram")
 hist(turo_tx$car.extra.num,xlab="car.extra.num",main="Histogram of car.extra.num")
 
-#14.continuouse var:car.faq.num
+#13.continuouse var:car.faq.num
 car.faq.num.summary <- turo_tx %>% 
   summarise_at(vars(car.faq.num),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -153,7 +142,7 @@ car.faq.num.summary
 #car.faq.num Histofram")
 hist(turo_tx$car.faq.num,xlab="car.faq.num",main="Histogram of car.faq.num")
 
-#15.continuouse var:car.miles.included
+#14.continuouse var:car.miles.included
 car.miles.included.summary <- turo_tx %>% 
   summarise_at(vars(car.miles.included),
                list(min=min, Q1=~quantile(., probs = 0.25,na.rm = TRUE),
@@ -163,7 +152,7 @@ car.miles.included.summary
 #car.miles.included Histofram")
 hist(turo_tx$car.miles.included,xlab="car.miles.included",main="Histogram of car.miles.included")
 
-#16.continuouse var:car.photo.num
+#15.continuouse var:car.photo.num
 car.photo.num.summary <- turo_tx %>% 
   summarise_at(vars(car.photo.num),
                list(min=min, Q1=~quantile(., probs = 0.25,na.rm = TRUE),
@@ -173,17 +162,8 @@ car.photo.num.summary
 #car.photo.num Histofram")
 hist(turo_tx$car.photo.num,xlab="car.photo.num",main="Histogram of car.photo.num")
 
-#17.continuouse var:car.self.pickup.avg.price
-car.self.pickup.avg.price.summary <- turo_tx %>% 
-  summarise_at(vars(car.self.pickup.avg.price),
-               list(min=min, Q1=~quantile(., probs = 0.25,na.rm = TRUE),
-                    medium=median, Q3=~quantile(., probs = 0.75,na.rm = TRUE),
-                    max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
-car.self.pickup.avg.price.summary
-#car.self.pickup.avg.price Histofram")
-hist(turo_tx$car.self.pickup.avg.price,xlab="car.self.pickup.avg.price",main="Histogram of car.self.pickup.avg.price")
 
-#18.continuouse var:car.extra.mile.fee
+#16.continuouse var:car.extra.mile.fee
 car.extra.mile.fee.summary <- turo_tx %>% 
   summarise_at(vars(car.extra.mile.fee),
                list(min=min, Q1=~quantile(., probs = 0.25,na.rm = TRUE),
@@ -193,17 +173,8 @@ car.extra.mile.fee.summary
 #car.extra.mile.fee Histofram")
 hist(turo_tx$car.extra.mile.fee,xlab="car.extra.mile.fee",main="Histogram of car.extra.mile.fee")
 
-#19.continuouse var:car.self.pickup.num
-car.self.pickup.num.summary <- turo_tx %>% 
-  summarise_at(vars(car.self.pickup.num),
-               list(min=min, Q1=~quantile(., probs = 0.25),
-                    medium=median, Q3=~quantile(., probs = 0.75),
-                    max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
-car.self.pickup.num.summary
-#car.self.pickup.num Histofram")
-hist(turo_tx$car.self.pickup.num,xlab="car.self.pickup.num",main="Histogram of car.self.pickup.num")
 
-#20.continuouse var:car.trip.price
+#17.continuouse var:car.trip.price
 car.trip.price.summary <- turo_tx %>% 
   summarise_at(vars(car.trip.price),
                list(min=min, Q1=~quantile(., probs = 0.25,na.rm = TRUE),
@@ -213,7 +184,7 @@ car.trip.price.summary
 #car.trip.price Histofram")
 hist(turo_tx$car.trip.price,xlab="car.trip.price",main="Histogram of car.trip.price")
 
-#21.continuouse var:host.car.num
+#18.continuouse var:host.car.num
 host.car.num.summary <- turo_tx %>% 
   summarise_at(vars(host.car.num),
                list(min=min, Q1=~quantile(., probs = 0.25),
@@ -223,7 +194,7 @@ host.car.num.summary
 #host.car.num Histofram")
 hist(turo_tx$host.car.num,xlab="host.car.num",main="Histogram of host.car.num")
 
-#22.continuouse var:host.tenure.in.weeks
+#19.continuouse var:host.tenure.in.weeks
 host.tenure.in.weeks.summary <- turo_tx %>% 
   summarise_at(vars(host.tenure.in.weeks),
                list(min=min, Q1=~quantile(., probs = 0.25,na.rm = TRUE),
@@ -232,6 +203,38 @@ host.tenure.in.weeks.summary <- turo_tx %>%
 host.tenure.in.weeks.summary
 #host.tenure.in.weeks Histofram")
 hist(turo_tx$host.tenure.in.weeks,xlab="host.tenure.in.weeks",main="Histogram of host.tenure.in.weeks")
+
+#20.categorical var:car.self.pickup.avg.price
+car.self.pickup.avg.price.freq <- turo_tx %>%
+  group_by(car.self.pickup.avg.price)%>%
+  summarise(n=n())%>%
+  mutate(relative_freq=n / sum(n))
+head(car.self.pickup.avg.price.freq)
+#car.self.pickup.avg.price bar chart
+barplot(car.self.pickup.avg.price.freq$n,names.arg=car.self.pickup.avg.price.freq$car.self.pickup.avg.price,
+        xlab="car.self.pickup.avg.price",ylab="Frequency",main="Bar Chart of car.self.pickup.avg.price")
+
+
+#21.categorical var:car.self.pickup.num
+car.self.pickup.num.freq <- turo_tx %>%
+  group_by(car.self.pickup.num)%>%
+  summarise(n=n())%>%
+  mutate(relative_freq=n / sum(n))
+head(car.self.pickup.num.freq)
+#car.self.pickup.num bar chart
+barplot(car.self.pickup.num.freq$n,names.arg=car.self.pickup.num.freq$car.self.pickup.num,
+        xlab="car.self.pickup.num",ylab="Frequency",main="Bar Chart of car.self.pickup.num")
+
+#22.categorical var: car.deliver.to.you.num
+car.deliver.to.you.num.freq <- turo_tx %>%
+  group_by(car.deliver.to.you.num)%>%
+  summarise(n=n())%>%
+  mutate(relative_freq=n / sum(n))
+head(car.deliver.to.you.num.freq)
+#car.deliver.to.you.num bar chart
+barplot(car.deliver.to.you.num.freq$n,names.arg=car.deliver.to.you.num.freq$car.deliver.to.you.num,
+        xlab="car.deliver.to.you.num",ylab="Frequency",main="Bar Chart of car.deliver.to.you.num")
+
 
 #23.categorical var:car.doors
 car.doors.freq <- turo_tx %>%
@@ -543,3 +546,67 @@ head(car.city.freq)
 #car.city bar chart
 barplot(car.city.freq$n,names.arg=car.city.freq$car.city,
         xlab="car.city",ylab="Frequency",main="Bar Chart of car.city")
+
+
+#evaluate car.trip.price as continuous variable or categorical varialbe
+car.trip.price.freq <- turo_tx %>%
+  group_by(car.trip.price)%>%
+  summarise(n=n())%>%
+  mutate(relative_freq=n / sum(n))
+head(car.trip.price.freq)
+#car.trip.price bar chart
+barplot(car.trip.price.freq$n,names.arg=car.trip.price.freq$car.trip.price,
+        xlab="car.trip.price",ylab="Frequency",main="Bar Chart of car.trip.price")
+
+
+#Use Inter Quartile Range (IQR) method to identify outliers of all continuous variables, then remove all observations containing outliers.
+#first, we use boxplot() function for virtual seen 19 continuous variables wether have outlier
+#1.car.deliver.airport.num
+ggplot(turo_tx)+
+  aes(x="",y= car.deliver.airport.num)+
+  geom_boxplot(fill="pink")+theme_minimal()
+
+#2.car.deliver.hotel.num
+ggplot(turo_tx)+
+  aes(x="",y= car.deliver.hotel.num)+
+  geom_boxplot(fill="pink")+theme_minimal()
+
+#3.continuouse var:car.deliver.train.station.num
+ggplot(turo_tx)+
+  aes(x="",y= car.deliver.train.station.num)+
+  geom_boxplot(fill="pink")+theme_minimal()
+
+##6.Build a multiple linear regression model using car.trip.price as dependent variable. 
+#Select at least five independent variables. Treat each categorical variable as 
+#a single variable although it may be broken into multiple dummy variables. 
+#Try different models and choose the best one you can find.
+#model 2
+#train categarical value
+turo_train<-dummy_cols(turo_tx,select_columns = NULL)
+print(turo_train)
+#fix only 1 leve
+values_count<-sapply(lapply(turo_train,unique),length)
+values_count
+#build model
+turo_lm <- lm(car.trip.price ~ .,data =turo_train[, values_count>1])
+
+turo_lm_summary<-summary(turo_lm)
+turo_lm_summary
+#choose 5 independent variables build model again 
+turo_model_lm <- lm(car.trip.price ~ car.make+car.model+
+                      car.extra.mile.fee+car.city+host.verified.phone,data =turo_tx)
+
+turo_model_lm_summary<-summary(turo_model_lm)
+options(max.print = 99999999)
+turo_model_lm_summary
+#Residual Plot
+autoplot(turo_model_lm)
+#model 3 
+turo_model2_lm <- lm(car.trip.price ~ car.make+car.displayed.user.review.num+
+                      car.extra.mile.fee+car.city+host.verified.phone,data =turo_tx)
+
+turo_model2_lm_summary<-summary(turo_model2_lm)
+options(max.print = 99999999)
+turo_model2_lm_summary
+#Residual Plot
+autoplot(turo_model2_lm)
