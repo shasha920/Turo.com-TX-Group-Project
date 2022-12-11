@@ -640,7 +640,7 @@ ggplot(turo_tx)+
 #Select at least five independent variables. Treat each categorical variable as 
 #a single variable although it may be broken into multiple dummy variables. 
 #Try different models and choose the best one you can find.
-#model 2
+#model 2 not very good
 #train categarical value
 turo_train<-dummy_cols(turo_tx,select_columns = NULL)
 print(turo_train)
@@ -661,7 +661,7 @@ options(max.print = 99999999)
 turo_model_lm_summary
 #Residual Plot
 autoplot(turo_model_lm)
-#model 3 
+#model 3 freedom too much
 turo_model2_lm <- lm(car.trip.price ~ car.make+car.displayed.user.review.num+
                       car.extra.mile.fee+car.city+host.verified.phone,data =turo_tx)
 
@@ -671,6 +671,7 @@ turo_model2_lm_summary
 #Residual Plot
 autoplot(turo_model2_lm)
 
+#rebuild model 2, delete before model 2 and model 3
 #categorical car.make
 table(turo_tx$car.make)
 class(turo_tx$car.make)
