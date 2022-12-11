@@ -18,7 +18,10 @@ car.deliver.airport.num.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.deliver.airport.num.summary
 #car.deliver.airport.num Histofram")
-hist(turo_tx$car.deliver.airport.num,xlab="car.deliver.airport.num",main="Histogram of car.deliver.airport.num")
+#hist(turo_tx$car.deliver.airport.num,xlab="car.deliver.airport.num",main="Histogram of car.deliver.airport.num")
+ggplot(turo_tx,aes(x =car.deliver.airport.num))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.deliver.airport.num")
 
 #2.continuouse var:car.deliver.hotel.num
 car.deliver.hotel.num.summary <- turo_tx %>% 
@@ -28,8 +31,10 @@ car.deliver.hotel.num.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.deliver.hotel.num.summary
 #car.deliver.hotel.num Histofram")
-hist(turo_tx$car.deliver.hotel.num,xlab="car.deliver.hotel.num",main="Histogram of car.deliver.hotel.num")
-
+#hist(turo_tx$car.deliver.hotel.num,xlab="car.deliver.hotel.num",main="Histogram of car.deliver.hotel.num")
+ggplot(turo_tx,aes(x =car.deliver.hotel.num))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.deliver.hotel.num")
 
 #3.continuouse var:car.deliver.train.station.num
 car.deliver.train.station.num.summary <- turo_tx %>% 
@@ -39,8 +44,10 @@ car.deliver.train.station.num.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.deliver.train.station.num.summary
 #car.deliver.train.station.num Histofram")
-hist(turo_tx$car.deliver.train.station.num,xlab="car.deliver.train.station.num",main="Histogram of car.deliver.train.station.num")
-
+#hist(turo_tx$car.deliver.train.station.num,xlab="car.deliver.train.station.num",main="Histogram of car.deliver.train.station.num")
+ggplot(turo_tx,aes(x =car.deliver.train.station.num))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.deliver.train.station.num")
 
 #4.continuouse var:car.displayed.turo.review.num
 car.displayed.turo.review.num.summary <- turo_tx %>% 
@@ -50,7 +57,11 @@ car.displayed.turo.review.num.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.displayed.turo.review.num.summary
 #car.displayed.turo.review.num Histofram")
-hist(turo_tx$car.displayed.turo.review.num,xlab="car.displayed.turo.review.num",main="Histogram of car.displayed.turo.review.num")
+#hist(turo_tx$car.displayed.turo.review.num,xlab="car.displayed.turo.review.num",main="Histogram of car.displayed.turo.review.num")
+ggplot(turo_tx,aes(x =car.displayed.turo.review.num))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.displayed.turo.review.num")
+
 
 #5.continuouse var:car.displayed.turo.review.num.past.12m
 car.displayed.turo.review.num.past.12m.summary <- turo_tx %>% 
@@ -60,7 +71,10 @@ car.displayed.turo.review.num.past.12m.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.displayed.turo.review.num.past.12m.summary
 #car.displayed.turo.review.num.past.12m Histofram")
-hist(turo_tx$car.displayed.turo.review.num.past.12m,xlab="car.displayed.turo.review.num.past.12m",main="Histogram of car.displayed.turo.review.num.past.12m")
+#hist(turo_tx$car.displayed.turo.review.num.past.12m,xlab="car.displayed.turo.review.num.past.12m",main="Histogram of car.displayed.turo.review.num.past.12m")
+ggplot(turo_tx,aes(x =car.displayed.turo.review.num.past.12m))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.displayed.turo.review.num.past.12m")
 
 #6.continuouse var:car.displayed.turo.review.num.past.18m
 car.displayed.turo.review.num.past.18m.summary <- turo_tx %>% 
@@ -70,7 +84,10 @@ car.displayed.turo.review.num.past.18m.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.displayed.turo.review.num.past.18m.summary
 #car.displayed.turo.review.num.past.18m Histofram")
-hist(turo_tx$car.displayed.turo.review.num.past.18m,xlab="car.displayed.turo.review.num.past.18m",main="Histogram of car.displayed.turo.review.num.past.18m")
+#hist(turo_tx$car.displayed.turo.review.num.past.18m,xlab="car.displayed.turo.review.num.past.18m",main="Histogram of car.displayed.turo.review.num.past.18m")
+ggplot(turo_tx,aes(x =car.displayed.turo.review.num.past.18m))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.displayed.turo.review.num.past.18m")
 
 #7.continuouse var:car.displayed.turo.review.num.past.6m
 car.displayed.turo.review.num.past.6m.summary <- turo_tx %>% 
@@ -80,7 +97,11 @@ car.displayed.turo.review.num.past.6m.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.displayed.turo.review.num.past.6m.summary
 #car.displayed.turo.review.num.past.6m Histofram")
-hist(turo_tx$car.displayed.turo.review.num.past.6m,xlab="car.displayed.turo.review.num.past.6m",main="Histogram of car.displayed.turo.review.num.past.6m")
+#hist(turo_tx$car.displayed.turo.review.num.past.6m,xlab="car.displayed.turo.review.num.past.6m",main="Histogram of car.displayed.turo.review.num.past.6m")
+ggplot(turo_tx,aes(x =car.displayed.turo.review.num.past.6m))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.displayed.turo.review.num.past.6m")
+
 
 #8.continuouse var:car.displayed.user.review.num
 car.displayed.user.review.num.summary <- turo_tx %>% 
@@ -90,7 +111,11 @@ car.displayed.user.review.num.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.displayed.user.review.num.summary
 #car.displayed.user.review.num Histofram")
-hist(turo_tx$car.displayed.user.review.num,xlab="car.displayed.user.review.num",main="Histogram of car.displayed.user.review.num")
+#hist(turo_tx$car.displayed.user.review.num,xlab="car.displayed.user.review.num",main="Histogram of car.displayed.user.review.num")
+ggplot(turo_tx,aes(x =car.displayed.user.review.num))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.displayed.user.review.num")
+
 
 #9.continuouse var:car.displayed.user.review.num.past.12m
 car.displayed.user.review.num.past.12m.summary <- turo_tx %>% 
@@ -100,17 +125,23 @@ car.displayed.user.review.num.past.12m.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.displayed.user.review.num.past.12m.summary
 #car.displayed.user.review.num.past.12m Histofram")
-hist(turo_tx$car.displayed.user.review.num.past.12m,xlab="car.displayed.user.review.num.past.12m",main="Histogram of car.displayed.user.review.num.past.12m")
+#hist(turo_tx$car.displayed.user.review.num.past.12m,xlab="car.displayed.user.review.num.past.12m",main="Histogram of car.displayed.user.review.num.past.12m")
+ggplot(turo_tx,aes(x =car.displayed.user.review.num.past.12m))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.displayed.user.review.num.past.12m")
 
-#10.continuouse var:car.displayed.turo.review.num.past.18m
-car.displayed.turo.review.num.past.18m.summary <- turo_tx %>% 
-  summarise_at(vars(car.displayed.turo.review.num.past.18m),
+#10.continuouse var:car.displayed.user.review.num
+car.displayed.user.review.num.past.18m.summary <- turo_tx %>% 
+  summarise_at(vars(car.displayed.user.review.num.past.18m),
                list(min=min, Q1=~quantile(., probs = 0.25),
                     medium=median, Q3=~quantile(., probs = 0.75),
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
-car.displayed.turo.review.num.past.18m.summary
-#car.displayed.turo.review.num.past.18m Histofram")
-hist(turo_tx$car.displayed.turo.review.num.past.18m,xlab="car.displayed.turo.review.num.past.18m",main="Histogram of car.displayed.turo.review.num.past.18m")
+car.displayed.user.review.num.past.18m.summary
+#car.displayed.user.review.num.past.18m Histofram")
+#hist(turo_tx$car.displayed.user.review.num.past.18m,xlab="car.displayed.user.review.num.past.18m",main="Histogram of car.displayed.user.review.num.past.18m")
+ggplot(turo_tx,aes(x =car.displayed.user.review.num.past.18m))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.displayed.user.review.num.past.18m")
 
 #11.continuouse var:car.displayed.user.review.num.past.6m
 car.displayed.user.review.num.past.6m.summary <- turo_tx %>% 
@@ -120,7 +151,10 @@ car.displayed.user.review.num.past.6m.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.displayed.user.review.num.past.6m.summary
 #car.displayed.user.review.num.past.6m Histofram")
-hist(turo_tx$car.displayed.user.review.num.past.6m,xlab="car.displayed.user.review.num.past.6m",main="Histogram of car.displayed.user.review.num.past.6m")
+#hist(turo_tx$car.displayed.user.review.num.past.6m,xlab="car.displayed.user.review.num.past.6m",main="Histogram of car.displayed.user.review.num.past.6m")
+ggplot(turo_tx,aes(x =car.displayed.user.review.num.past.6m))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.displayed.user.review.num.past.6m")
 
 #12.continuouse var:car.extra.num
 car.extra.num.summary <- turo_tx %>% 
@@ -130,7 +164,10 @@ car.extra.num.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.extra.num.summary
 #car.extra.num Histofram")
-hist(turo_tx$car.extra.num,xlab="car.extra.num",main="Histogram of car.extra.num")
+#hist(turo_tx$car.extra.num,xlab="car.extra.num",main="Histogram of car.extra.num")
+ggplot(turo_tx,aes(x =car.extra.num))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.extra.num")
 
 #13.continuouse var:car.faq.num
 car.faq.num.summary <- turo_tx %>% 
@@ -140,7 +177,10 @@ car.faq.num.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.faq.num.summary
 #car.faq.num Histofram")
-hist(turo_tx$car.faq.num,xlab="car.faq.num",main="Histogram of car.faq.num")
+#hist(turo_tx$car.faq.num,xlab="car.faq.num",main="Histogram of car.faq.num")
+ggplot(turo_tx,aes(x =car.faq.num))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.faq.num")
 
 #14.continuouse var:car.miles.included
 car.miles.included.summary <- turo_tx %>% 
@@ -150,7 +190,10 @@ car.miles.included.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.miles.included.summary
 #car.miles.included Histofram")
-hist(turo_tx$car.miles.included,xlab="car.miles.included",main="Histogram of car.miles.included")
+#hist(turo_tx$car.miles.included,xlab="car.miles.included",main="Histogram of car.miles.included")
+ggplot(turo_tx,aes(x =car.miles.included))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.miles.included")
 
 #15.continuouse var:car.photo.num
 car.photo.num.summary <- turo_tx %>% 
@@ -160,8 +203,10 @@ car.photo.num.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.photo.num.summary
 #car.photo.num Histofram")
-hist(turo_tx$car.photo.num,xlab="car.photo.num",main="Histogram of car.photo.num")
-
+#hist(turo_tx$car.photo.num,xlab="car.photo.num",main="Histogram of car.photo.num")
+ggplot(turo_tx,aes(x =car.photo.num))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.photo.num")
 
 #16.continuouse var:car.extra.mile.fee
 car.extra.mile.fee.summary <- turo_tx %>% 
@@ -171,8 +216,10 @@ car.extra.mile.fee.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.extra.mile.fee.summary
 #car.extra.mile.fee Histofram")
-hist(turo_tx$car.extra.mile.fee,xlab="car.extra.mile.fee",main="Histogram of car.extra.mile.fee")
-
+#hist(turo_tx$car.extra.mile.fee,xlab="car.extra.mile.fee",main="Histogram of car.extra.mile.fee")
+ggplot(turo_tx,aes(x =car.extra.mile.fee))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.extra.mile.fee")
 
 #17.continuouse var:car.trip.price
 car.trip.price.summary <- turo_tx %>% 
@@ -182,7 +229,10 @@ car.trip.price.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 car.trip.price.summary
 #car.trip.price Histofram")
-hist(turo_tx$car.trip.price,xlab="car.trip.price",main="Histogram of car.trip.price")
+#hist(turo_tx$car.trip.price,xlab="car.trip.price",main="Histogram of car.trip.price")
+ggplot(turo_tx,aes(x =car.trip.price))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of car.trip.price")
 
 #18.continuouse var:host.car.num
 host.car.num.summary <- turo_tx %>% 
@@ -192,7 +242,10 @@ host.car.num.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 host.car.num.summary
 #host.car.num Histofram")
-hist(turo_tx$host.car.num,xlab="host.car.num",main="Histogram of host.car.num")
+#hist(turo_tx$host.car.num,xlab="host.car.num",main="Histogram of host.car.num")
+ggplot(turo_tx,aes(x =host.car.num))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of host.car.num")
 
 #19.continuouse var:host.tenure.in.weeks
 host.tenure.in.weeks.summary <- turo_tx %>% 
@@ -202,7 +255,10 @@ host.tenure.in.weeks.summary <- turo_tx %>%
                     max=max,mean=mean,sd=sd,ske=skewness),na.rm = TRUE)
 host.tenure.in.weeks.summary
 #host.tenure.in.weeks Histofram")
-hist(turo_tx$host.tenure.in.weeks,xlab="host.tenure.in.weeks",main="Histogram of host.tenure.in.weeks")
+#hist(turo_tx$host.tenure.in.weeks,xlab="host.tenure.in.weeks",main="Histogram of host.tenure.in.weeks")
+ggplot(turo_tx,aes(x =host.tenure.in.weeks))+
+  geom_histogram(bins = 30,fill='seagreen2')+
+  ggtitle("Histogram of host.tenure.in.weeks")
 
 #20.categorical var:car.self.pickup.avg.price
 car.self.pickup.avg.price.freq <- turo_tx %>%
@@ -212,7 +268,7 @@ car.self.pickup.avg.price.freq <- turo_tx %>%
 head(car.self.pickup.avg.price.freq)
 #car.self.pickup.avg.price bar chart
 barplot(car.self.pickup.avg.price.freq$n,names.arg=car.self.pickup.avg.price.freq$car.self.pickup.avg.price,
-        xlab="car.self.pickup.avg.price",ylab="Frequency",main="Bar Chart of car.self.pickup.avg.price")
+       xlab="car.self.pickup.avg.price",ylab="Frequency",main="Bar Chart of car.self.pickup.avg.price")
 
 
 #21.categorical var:car.self.pickup.num
@@ -391,20 +447,22 @@ car.make.freq <- turo_tx %>%
   group_by(car.make)%>%
   summarise(n=n())%>%
   mutate(relative_freq=n / sum(n))
-head(car.make.freq)
+car.make.freq.top5<-car.make.freq[order(-car.make.freq$relative_freq),,drop=FALSE]
+car.make.freq.top5
 #car.make bar chart
-barplot(car.make.freq$n,names.arg=car.make.freq$car.make,
-        xlab="car.make",ylab="Frequency",main="Bar Chart of car.make")
+barplot(car.make.freq.top5$n[1:5],names.arg=car.make.freq.top5$car.make[1:5],
+        xlab="car.make",ylab="Frequency",main="Bar Chart of top 5 car.make ")
 
 #39.categorical var:car.model
 car.model.freq <- turo_tx %>%
   group_by(car.model)%>%
   summarise(n=n())%>%
   mutate(relative_freq=n / sum(n))
-head(car.model.freq)
+car.model.freq.top5<-car.model.freq[order(-car.model.freq$relative_freq),,drop=FALSE]
+car.model.freq.top5
 #car.model bar chart
-barplot(car.model.freq$n,names.arg=car.model.freq$car.model,
-        xlab="car.model",ylab="Frequency",main="Bar Chart of car.model")
+barplot(car.model.freq.top5$n[1:5],names.arg=car.model.freq.top5$car.model[1:5],
+        xlab="car.model",ylab="Frequency",main="Bar Chart of top 5 car.model")
 
 #40.categorical var:car.photo.verified
 car.photo.verified.freq <- turo_tx %>%
@@ -421,20 +479,20 @@ car.power.freq <- turo_tx %>%
   group_by(car.power)%>%
   summarise(n=n())%>%
   mutate(relative_freq=n / sum(n))
-head(car.power.freq)
+car.power.freq.top5<-car.power.freq[order(-car.power.freq$relative_freq),,drop=FALSE]
 #car.power bar chart
-barplot(car.power.freq$n,names.arg=car.power.freq$car.power,
-        xlab="car.power",ylab="Frequency",main="Bar Chart of car.power")
+barplot(car.power.freq.top5$n[1:5],names.arg=car.power.freq.top5$car.power[1:5],
+        xlab="car.power",ylab="Frequency",main="Bar Chart of top 5 car.power")
 
 #42.categorical var:car.rental.type
 car.rental.type.freq <- turo_tx %>%
   group_by(car.rental.type)%>%
   summarise(n=n())%>%
   mutate(relative_freq=n / sum(n))
-head(car.rental.type.freq)
+car.rental.type.freq.top5<-car.rental.type.freq[order(-car.rental.type.freq$relative_freq),,drop=FALSE]
 #car.rental.type bar chart
-barplot(car.rental.type.freq$n,names.arg=car.rental.type.freq$car.rental.type,
-        xlab="car.rental.type",ylab="Frequency",main="Bar Chart of car.rental.type")
+barplot(car.rental.type.freq.top5$n[1:5],names.arg=car.rental.type.freq.top5$car.rental.type[1:5],
+        xlab="car.rental.type",ylab="Frequency",main="Bar Chart of top 5 car.rental.type")
 
 #43.categorical var:car.state
 car.state.freq <- turo_tx %>%
@@ -471,10 +529,11 @@ car.year.freq <- turo_tx %>%
   group_by(car.year)%>%
   summarise(n=n())%>%
   mutate(relative_freq=n / sum(n))
-head(car.year.freq)
+car.year.freq.top5<-car.year.freq[order(-car.year.freq$relative_freq),,drop=FALSE]
+car.year.freq.top5
 #car.year bar chart
-barplot(car.year.freq$n,names.arg=car.year.freq$car.year,
-        xlab="car.year",ylab="Frequency",main="Bar Chart of car.year")
+barplot(car.year.freq.top5$n[1:5],names.arg=car.year.freq.top5$car.year[1:5],
+        xlab="car.year",ylab="Frequency",main="Bar Chart of top 5 car.year")
 
 #47.categorical var:host.all.star
 host.all.star.freq <- turo_tx %>%
@@ -542,10 +601,11 @@ car.city.freq <- turo_tx %>%
   group_by(car.city)%>%
   summarise(n=n())%>%
   mutate(relative_freq=n / sum(n))
-head(car.city.freq)
+car.city.freq.top5<-car.city.freq[order(-car.city.freq$relative_freq),,drop=FALSE]
+car.city.freq.top5
 #car.city bar chart
-barplot(car.city.freq$n,names.arg=car.city.freq$car.city,
-        xlab="car.city",ylab="Frequency",main="Bar Chart of car.city")
+barplot(car.city.freq.top5$n[1:5],names.arg=car.city.freq.top5$car.city[1:5],
+        xlab="car.city",ylab="Frequency",main="Bar Chart of top 5 car.city")
 
 
 #evaluate car.trip.price as continuous variable or categorical varialbe
@@ -610,3 +670,94 @@ options(max.print = 99999999)
 turo_model2_lm_summary
 #Residual Plot
 autoplot(turo_model2_lm)
+
+#categorical car.make
+table(turo_tx$car.make)
+class(turo_tx$car.make)
+levels(turo_tx$car.make)
+levels.order<-c("toyota","bmw","mercedes-benz","ford","chevrolet")
+turo_tx$car.make<-factor(turo_tx$car.make,levels.order)
+levels(turo_tx$car.make)
+#categorical car.year
+table(turo_tx$car.year)
+class(turo_tx$car.year)
+levels(turo_tx$car.year)
+levels.order<-c(2015,2016,2014,2017,2018)
+turo_tx$car.year<-factor(turo_tx$car.year,levels.order)
+levels(turo_tx$car.year)
+
+#categorical car.extra.child.safety.seat                                                                                         
+table(turo_tx$car.extra.child.safety.seat)
+class(turo_tx$car.extra.child.safety.seat)
+levels(turo_tx$car.extra.child.safety.seat)
+levels.order<-c("FALSE","TRUE")
+turo_tx$car.extra.child.safety.seat<-factor(turo_tx$car.extra.child.safety.seat,levels.order)
+levels(turo_tx$car.extra.child.safety.seat) 
+
+
+#mutiple linear regression
+turo_model_lm <- lm(car.trip.price ~ car.make+car.year+car.extra.mile.fee+
+                      car.extra.child.safety.seat+
+                      car.extra.num,data =turo_tx)
+
+turo_model_lm_summary<-summary(turo_model_lm)
+options(max.print = 99999999)
+turo_model_lm_summary
+vif(turo_model_lm)
+
+
+#options
+#categorical car.deliver.to.you.num                    
+table(turo_tx$car.deliver.to.you.num)
+class(turo_tx$car.deliver.to.you.num)
+levels(turo_tx$car.deliver.to.you.num)
+levels.order<-c("No","Yes")
+turo_tx$car.deliver.to.you.num<-factor(turo_tx$car.deliver.to.you.num)
+levels(turo_tx$car.deliver.to.you.num)
+#categorical host.verified.phone                                       
+table(turo_tx$host.verified.phone)
+class(turo_tx$host.verified.phone)
+levels(turo_tx$host.verified.phone)
+levels.order<-c("FALSE","TRUE")
+turo_tx$host.verified.phone<-factor(turo_tx$host.verified.phone,levels.order)
+levels(turo_tx$host.verified.phone)
+#categorical host.verified.fb                                                             
+table(turo_tx$host.verified.fb)
+class(turo_tx$host.verified.fb)
+levels(turo_tx$host.verified.fb)
+levels.order<-c("FALSE","TRUE")
+turo_tx$host.verified.fb<-factor(turo_tx$host.verified.fb,levels.order)
+levels(turo_tx$host.verified.fb)                                       
+
+#categorical car.rental.type                                                                                           
+table(turo_tx$car.rental.type)
+class(turo_tx$car.rental.type)
+levels(turo_tx$car.rental.type)
+levels.order<-c("car-rental","suv-rental","truck-rental","minivan-rental","van-rental")
+turo_tx$car.rental.type<-factor(turo_tx$car.rental.type,levels.order)
+levels(turo_tx$car.rental.type)                                       
+
+#categorical car.power                                                                                           
+table(turo_tx$car.power)
+class(turo_tx$car.power)
+levels(turo_tx$car.power)
+levels.order<-c("Gas","Gas (Premium)","Gas (Regular)","Hybrid","Diesel")
+turo_tx$car.power<-factor(turo_tx$car.power,levels.order)
+levels(turo_tx$car.power)  
+
+
+#categorical car.model
+table(turo_tx$car.model)
+class(turo_tx$car.model)
+levels(turo_tx$car.model)
+levels.order<-c("camry","3-series","c-class","corolla","accord")
+turo_tx$car.model<-factor(turo_tx$car.model,levels.order)
+levels(turo_tx$car.model)
+
+#categorical car.city
+table(turo_tx$car.city)
+class(turo_tx$car.city)
+levels(turo_tx$car.city)
+levels.order<-c("houston","dallas","irving","plano","fort-worth")
+turo_tx$car.city<-factor(turo_tx$car.city,levels.order)
+levels(turo_tx$car.city)
